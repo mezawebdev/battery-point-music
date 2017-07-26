@@ -1,0 +1,240 @@
+// Frameworks
+
+// Definings
+@import "_reset.scss";
+@import "_variables.scss";
+
+// Global Styles
+@import "_globals.scss";
+
+// Page Specifics
+
+// Mixins
+@import "_mixins.scss";
+
+@import url('https://fonts.googleapis.com/css?family=EB+Garamond|Lora|PT+Serif');
+
+
+$blue: #213076;
+
+body {
+	background: #FFFFE8;
+	font-family: "Times New Roman", sans-serif;
+	padding-bottom: 50px;
+
+}
+
+#star-wrapper {
+	pointer-events: none;
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	overflow: hidden;
+	.star {
+		color: $blue;
+		font-size: 1.5em;
+		position: absolute;
+		top: 100%;
+		animation-name: starAnim;
+		animation-duration: 4s;	
+	}
+}
+
+
+.container {
+	width: 100%;
+	height: 100%;
+	overflow-x: hidden;
+}
+
+#main-content {
+	background: transparent;
+	.moveable {
+		background: red;
+		width: 200%;
+		margin: 0;
+		z-index: 2;
+		position: relative;
+		.album1 {
+			width: 50%;
+			background: transparent;
+			height: 100%;
+			float: left;
+		}
+		.album2 {
+			background: transparent;
+			width: 50%;
+			height: 100%;
+			float: right;
+		}
+	}
+
+	.scroller-left {
+		float: right;
+		width: 20px;
+		height: 20px;
+		margin-top: 15px;
+		background: transparent;
+		border: none;
+		font-size: 1.5em;
+		color: $blue;
+		opacity: 0.3;
+		position: relative;
+		top: 8px;
+		left: 12px;
+	}
+
+	.scroller-right {
+		width: 20px;
+		height: 20px;
+		margin-top: 15px;
+		background: transparent;
+		border: none;
+		font-size: 1.5em;
+		color: $blue;
+		position: relative;
+		top: 8px;
+		left: -12px;
+	}
+	img.star {
+		width: 400px;
+		margin: 0 auto;
+		display: block;
+		margin-top: 40px;
+		@media (max-width: 480px) {
+			width: 300px;
+		}	
+	}
+
+	iframe {
+		border: 0; 
+		width: 400px; 
+		height: 80px;
+		margin: 0 auto;
+		display: block;
+		margin-top: 10px;
+		@media (max-width: 480px) {
+			width: 300px;
+		}
+	}
+
+	h1 {
+		font-size: 2.5em;
+		text-align: center;
+		margin-top: 40px;
+		color: #213076;
+		@media (max-width: 480px) {
+			font-size: 2.1em;
+		}
+	}
+
+	.menu {
+		text-align: center;
+		@media (max-width: 480px) {
+			font-size: 0.8em;
+		}
+		ul {
+			width: auto;
+			display: inline-block;
+			padding-right: 10px;
+		}
+		li {
+			float: left;
+			margin-left: 10px;
+			margin-top: 40px;
+			a {
+				color: #213076;
+			}
+			a:hover {
+				text-decoration: none;
+				color: #4361F4;
+			}
+		}
+	}
+
+	.menu-row-2 {
+		margin-top: -10px;
+	}
+
+	#social-media {
+		text-align: center;
+		ul {
+			width: auto;
+			display: inline-block;
+			padding-right: 10px;
+		}
+		li {
+			float: left;
+			margin-left: 10px;
+			button {
+				width: 27px;
+				height: 27px;
+				border-radius: 50%;
+				background: transparent;
+				//background: red;
+				//background: rgba(255, 255, 255, 0.5);
+				border: none;
+				text-align: center;
+				margin: auto;
+				img {
+					margin-top: -3px;
+					margin-left: -7px;
+					opacity: 0.7;
+					transition: opacity 0.25s ease-in-out;
+				}
+				
+			}
+			button:hover img {
+				opacity: 1;
+			}
+		}
+	}
+}
+
+#pop-up {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	z-index: 9999;
+	background: white;
+	top: 100%;
+	left: 0;
+	padding: 30px;
+	overflow: scroll;
+	button {
+		background: transparent;
+		border: none;
+		position: absolute;
+	}
+	.content {
+		width: 100%;
+		height: 100%;
+		text-align: center;
+		line-height: 18px;
+		h1 {
+			font-size: 2em;
+		}
+		h4 {
+			font-family: "PT Serif";
+			font-size: 1.5em;
+			margin: 20px 0 10px 0;
+		}
+		p {
+			font-family: "PT Serif";
+			color: black !important;
+		}
+	}
+}
+
+@keyframes starAnim {
+	80% {
+		opacity: 0.6;
+	}
+	100% {
+		top: 88%;
+		opacity: 0;
+	}
+}
+
+
+

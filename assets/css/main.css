@@ -1,0 +1,224 @@
+/* http://meyerweb.com/eric/tools/css/reset/ */
+/* v1.0 | 20080212 */
+@import url("https://fonts.googleapis.com/css?family=EB+Garamond|Lora|PT+Serif");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+/* remember to define focus styles! */
+:focus {
+  outline: 0; }
+
+/* remember to highlight inserts somehow! */
+ins {
+  text-decoration: none; }
+
+del {
+  text-decoration: line-through; }
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body {
+  background: #FFFFE8;
+  font-family: "Times New Roman", sans-serif;
+  padding-bottom: 50px; }
+
+#star-wrapper {
+  pointer-events: none;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  overflow: hidden; }
+  #star-wrapper .star {
+    color: #213076;
+    font-size: 1.5em;
+    position: absolute;
+    top: 100%;
+    animation-name: starAnim;
+    animation-duration: 4s; }
+
+.container {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden; }
+
+#main-content {
+  background: transparent; }
+  #main-content .moveable {
+    background: red;
+    width: 200%;
+    margin: 0;
+    z-index: 2;
+    position: relative; }
+    #main-content .moveable .album1 {
+      width: 50%;
+      background: transparent;
+      height: 100%;
+      float: left; }
+    #main-content .moveable .album2 {
+      background: transparent;
+      width: 50%;
+      height: 100%;
+      float: right; }
+  #main-content .scroller-left {
+    float: right;
+    width: 20px;
+    height: 20px;
+    margin-top: 15px;
+    background: transparent;
+    border: none;
+    font-size: 1.5em;
+    color: #213076;
+    opacity: 0.3;
+    position: relative;
+    top: 8px;
+    left: 12px; }
+  #main-content .scroller-right {
+    width: 20px;
+    height: 20px;
+    margin-top: 15px;
+    background: transparent;
+    border: none;
+    font-size: 1.5em;
+    color: #213076;
+    position: relative;
+    top: 8px;
+    left: -12px; }
+  #main-content img.star {
+    width: 400px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 40px; }
+    @media (max-width: 480px) {
+      #main-content img.star {
+        width: 300px; } }
+  #main-content iframe {
+    border: 0;
+    width: 400px;
+    height: 80px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 10px; }
+    @media (max-width: 480px) {
+      #main-content iframe {
+        width: 300px; } }
+  #main-content h1 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-top: 40px;
+    color: #213076; }
+    @media (max-width: 480px) {
+      #main-content h1 {
+        font-size: 2.1em; } }
+  #main-content .menu {
+    text-align: center; }
+    @media (max-width: 480px) {
+      #main-content .menu {
+        font-size: 0.8em; } }
+    #main-content .menu ul {
+      width: auto;
+      display: inline-block;
+      padding-right: 10px; }
+    #main-content .menu li {
+      float: left;
+      margin-left: 10px;
+      margin-top: 40px; }
+      #main-content .menu li a {
+        color: #213076; }
+      #main-content .menu li a:hover {
+        text-decoration: none;
+        color: #4361F4; }
+  #main-content .menu-row-2 {
+    margin-top: -10px; }
+  #main-content #social-media {
+    text-align: center; }
+    #main-content #social-media ul {
+      width: auto;
+      display: inline-block;
+      padding-right: 10px; }
+    #main-content #social-media li {
+      float: left;
+      margin-left: 10px; }
+      #main-content #social-media li button {
+        width: 27px;
+        height: 27px;
+        border-radius: 50%;
+        background: transparent;
+        border: none;
+        text-align: center;
+        margin: auto; }
+        #main-content #social-media li button img {
+          margin-top: -3px;
+          margin-left: -7px;
+          opacity: 0.7;
+          transition: opacity 0.25s ease-in-out; }
+      #main-content #social-media li button:hover img {
+        opacity: 1; }
+
+#pop-up {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 9999;
+  background: white;
+  top: 100%;
+  left: 0;
+  padding: 30px;
+  overflow: scroll; }
+  #pop-up button {
+    background: transparent;
+    border: none;
+    position: absolute; }
+  #pop-up .content {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 18px; }
+    #pop-up .content h1 {
+      font-size: 2em; }
+    #pop-up .content h4 {
+      font-family: "PT Serif";
+      font-size: 1.5em;
+      margin: 20px 0 10px 0; }
+    #pop-up .content p {
+      font-family: "PT Serif";
+      color: black !important; }
+
+@keyframes starAnim {
+  80% {
+    opacity: 0.6; }
+  100% {
+    top: 88%;
+    opacity: 0; } }
+
+/*# sourceMappingURL=main.css.map */
